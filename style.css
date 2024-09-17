@@ -1,0 +1,168 @@
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Style du menu de navigation */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Style des sections */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Titres principaux */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Sous-titres */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Style des paragraphes */
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Style des listes dans la section compétences */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Style des projets */
+article {
+    margin-bottom: 30px;
+}
+
+article h2 {
+    color: #ff9800;
+}
+
+article p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Style du formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+}
+
+form input[type="submit"] {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e68900;
+}
+
+/* Style des liens de contact */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff9800;
+}
+
+/* Style des informations de contact */
+section#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section#contact ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    form input, form textarea {
+        font-size: 0.9em;
+    }
+}
