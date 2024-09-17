@@ -1,10 +1,61 @@
-/* Style global */
-body {
-    font-family: Arial, sans-serif;
+/* En-tête avec photo de couverture et profil */
+.header {
+    position: relative;
+    height: 300px; /* Hauteur de la photo de couverture */
+    background-color: #3b3b5c; /* Bleu foncé */
+    color: #fff;
+}
+
+.cover-photo {
+    height: 300px; /* Hauteur de la photo de couverture */
+    background-image: url('chemin/vers/photo-de-couverture.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+}
+.profile h1 {
     margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    font-size: 2rem; /* Taille de la police pour le titre */
+    font-weight: bold; /* Poids du texte */
+    color: rgba(231, 224, 224, 0.7); /* texte */
+}
+
+/*.profile-photo {
+    border-radius: 50%;
+    width: 200px; /* Largeur de la photo de profil 
+    height: 200px; /* Hauteur de la photo de profil 
+    object-fit: cover;
+    border: 3px solid #fff; /* Bordure blanche 
+    margin-bottom: 1rem;
+}*/
+/* Photo de profil */
+.profile-photo {
+    width: 200px; /* Augmenter la largeur à 200px */
+    height: 200px; /* Augmenter la hauteur à 200px */
+    border-radius: 50%; /* Garder la forme ronde */
+    margin-bottom: 1rem; /* Espace sous la photo */
+    object-fit: cover; /* Assurer que l'image couvre le cadre sans déformation */
+    border: 4px solid #ffffff; /* Ajouter une bordure blanche pour un contraste supplémentaire */
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    margin: 0;
+    font-style: italic;
 }
 
 /* Menu de navigation */
@@ -123,19 +174,22 @@ article {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+article h2 a {
+    color: #3b3b5c; /* Bleu foncé */
+}
+
+article p {
+    margin: 0.5rem 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 0.5rem;
+    .profile {
+        width: 90%;
     }
-    
-    nav ul li a {
-        display: block;
-        padding: 0.5rem 0;
-    }
-    
-    form input[type="submit"] {
-        width: 100%;
+
+    .profile-photo {
+        width: 80px;
+        height: 80px;
     }
 }
