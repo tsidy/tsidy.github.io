@@ -47,7 +47,7 @@ header {
     background-image: url('Couverture_Web.png');
     background-size: cover;
     background-position: center;
-    height: 150px; /* Ajustez la hauteur pour plus de compacité */
+    height: 300px; /* Ajustez la hauteur pour plus de compacité */
     width: 100%;
     position: relative;
 }
