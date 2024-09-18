@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andriniaina RAKOTOZAFY Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Inclure la bibliothèque EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -40,106 +40,117 @@
     </script>
 </head>
 <body>
-
     <!-- Menu de navigation -->
     <nav>
         <ul>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#projects">Mes projets</a></li>
+            
+            <li><a href="services.html">Mes services</a></li>
+            <li><a href="apropos.html">A propos</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects">Mes projets</a></li>
         </ul>
     </nav>
 
-    <!-- Section d'en-tête avec photo de couverture et photo de profil -->
+    <!-- Image de bienvenue -->
     <header>
-        <div class="cover-photo"></div>
-        <div class="profile-container">
-            <img src="profil.jpg" alt="Photo de Profil" class="profile-photo">
-            <div class="profile">
-                <h1>Andriniaina RAKOTOZAFY</h1>
-                <p>Data Analyste</p>
-            </div>
-        </div>
+        <img src="Couverture_Web.png" alt="Bienvenue">
+        <img src="profil.jpg" alt="Photo de Profil" class="profile-photo">
+        <section id="welcome-message">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Bonjour et merci de visiter mon portfolio ! <br>
+                Ici, vous découvrirez mes projets récents en analyse de données, gestion de projets , et bien plus encore. Mon travail reflète ma passion pour l'analyse de données, le développement durable,... <br>
+                N'hésitez pas à explorer et à me contacter pour discuter de collaborations potentielles ou de nouvelles opportunités.</p>
+        </section>
+        
     </header>
 
-    <!-- Section "À propos" -->
-    <section id="about">
-        <h1>À propos de moi</h1>
-        <p>🎓 Informaticien, Diplômé en Intelligence Artificielle et Science des Données | 📊 Analyste de Données | 
-            <br>🌱 Passionné par les Projets de Développement Durable.
-
-            <p>Ayant acquis des connaissances en informatique et développé des compétences en statistiques, j'ai passé les dernières années à utiliser les données pour fournir des informations utiles et contribuer aux prises de décisions. Mon parcours m'a permis de toucher à plusieurs domaines, notamment l'analyse de données, les études statistiques, la gestion de projets et l'évaluation des performances.</p>
-            </p>
-        <h2>🔍 Compétences Clés</h2>
-        <ul>
-            <li>Analyse de Données et Visualisation (Python, R, Excel, Power BI)</li>
-            <li>Gestion de Projets et Suivi & Évaluation</li>
-            <li>Développement d'Applications et outils de traitement</li>
-            <li>Modélisation statistique et visualisation de données</li>
-        </ul>
+    <!-- Aperçu des projets -->
+    <section id="projets">
+        <h2>Mes projets</h2> 
+        <div class="project-grid">
+            <div class="project-item">
+                <a href="projet-rfm.html"><h3>Etude de segmentation clients</h3></a>
+                <img src="resultats_cluster.PNG" alt="Projet 1">
+                
+            </div>
+            <div class="project-item">
+                <a href="projet-agricole.html"><h3>Maquette de projet "Rizipisciculture"</h3></a>
+                <img src="3.PNG" alt="Projet 2">
+                
+            </div>
+            <div class="project-item">
+                <h3>Projet de formation de suivi évaluation</h3>
+                <img src="4.PNG" alt="Projet 3">
+                
+            </div>
+        </div>
     </section>
 
-    <!-- Section "Mes projets" -->
-    <section id="projects">
-        <h1>Mes Projets</h1>
-        <!-- <article>
-            <h2><a href="projet-agricole.html">Suivi-évaluation d'un projet agricole (2023)</a></h2>
-            <p>Projet de suivi-évaluation pour un programme de rizipisciculture en Madagascar. Analyse des indicateurs de performance des fermes locales et génération de rapports visuels.</p>
-            <p><strong>Technologies :</strong> Excel, Power BI, Python</p>
-        </article> -->
-        <article>
-            <h2><a href="projet-rfm.html">Analyse RFM pour une startup (2022)</a></h2>
-            <p>Segmentation de la clientèle basée sur des critères de Recency, Frequency, Monetary (RFM) afin d'optimiser les campagnes marketing et augmenter la fidélisation.</p>
-            <p><strong>Technologies :</strong> Python (Pandas, Scikit-learn, numpy, matplotlib), Power BI</p>
-            <p> <strong>Technique: </strong> K-Means, K-PCA, PCA, RFM (Recency, Frequency, Monetary), Cohorte</p>
-        </article>
-        <!-- Ajouter d'autres projets ici -->
+    <!-- Mon procédé -->
+    <section id="process">
+        <h2>Mon procédé</h2>
+        <div class="process-container">
+            <div class="process-step">
+                <h3>1. Analyse des besoins</h3>
+                <hr>
+                <h4>Comprendre</h4>
+                <p>Dans un premier temps, j’établis une Business request qui permet une meilleure compréhension des attentes.
+
+                    Dans une seconde partie, j’analyse les données sur lesquelles je travaille afin de retenir seulement celles dont j’ai besoin.</p>
+            </div>
+            <div class="process-step">
+                <h3>2. Requêtes et nettoyage</h3>
+                <hr>
+                <h4>Préparation des données</h4>
+                <p>À partir des données fournies (MySQL/ SQL Server/Excel/CSV/Python/ JSON), je nettoie les données en amont avant de les préparer. 
+
+                    Pour cette étape, je transforme les informations à partir de la base de données, ou sur PowerQuery (code M), Excel, ou alors sur Python. Pour finir, je les importe sur l’outil BI demandé.</p>
+            </div>
+            <div class="process-step">
+                <h3>3. Création dashboard</h3>
+                <hr>
+                <h4>Élaboration des visuelles</h4>
+                <p>Après avoir réalisé les relations entre les différentes tables dans le modèle, et avoir créé les mesures intéressantes, je construis les différents visuels adaptés en fonction des destinataires (Clients/inter entreprise/ autres services).
+
+                    Création d’interactivité et/ou sous format mobile.</p>
+            </div>
+            <div class="process-step">
+                <h3>4. Communiquer</h3>
+                <hr>
+                <h4>Transmettre aux métiers</h4>
+                <p>Dans un dernier temps, je transmets mes analyses aux équipes métiers avec la rédaction d’ un rapport accompagnant mes visuels, ou en réalisant une présentation.
+
+                    Pour finir, je rédige une synthèse sur les attentes et objectifs, ainsi que sur les points clés à identifier.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Section "Contact" -->
-    <!-- <section id="contact">
-        <h1>Contact</h1>
-        <p>Si vous souhaitez collaborer ou en savoir plus sur mon travail, n'hésitez pas à me contacter.</p>
-        <form action="mailto:tsidymiboela0@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Votre nom"><br><br>
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required placeholder="Votre email"><br><br>
-            <label for="message">Message :</label><br>
-            <textarea id="message" name="message" rows="4" required minlength="10" placeholder="Votre message"></textarea><br><br>
-            <input type="submit" value="Envoyer">
-        </form>
-        <p>Ou contactez-moi directement :</p>
-        <ul>
-            <li>Email : <a href="mailto:tsidymiboela0@gmail.com">tsidymiboela0@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/andriniaina-rakotozafy-65954615a/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://tsidy.github.io/" target="_blank">GitHub</a></li>
-            <li>Phone : +261 32 67 403 67<br> +261 34 61 810 60</li>
-        </ul>
-    </section> -->
+    <!-- Contact -->
     <section id="contact">
-        <h1>Contact</h1>
-        <p>Si vous souhaitez collaborer ou en savoir plus sur mon travail, n'hésitez pas à me contacter.</p>
-        <form id="contactForm" onsubmit="sendEmail(event)">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required placeholder="Votre nom"><br><br>
-
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required placeholder="Votre email"><br><br>
-
-            <label for="message">Message :</label><br>
-            <textarea id="message" name="message" rows="4" required placeholder="Votre message"></textarea><br><br>
-
-            <input type="submit" value="Envoyer">
-        </form>
-        <p>Ou contactez-moi directement :</p>
-        <ul>
-            <li>Email : <a href="mailto:tsidymiboela0@gmail.com">tsidymiboela0@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/andriniaina-rakotozafy-65954615a/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://tsidy.github.io/" target="_blank">GitHub</a></li>
-            <li>Phone : +261 32 67 403 67<br> +261 34 61 810 60</li>
-        </ul>
+        <h2>Me contacter</h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <h3>Coordonnées</h3>
+                <p><a href="https://www.linkedin.com/in/andriniaina-rakotozafy-65954615a/" target="_blank">LinkedIn</a></p>
+                <p>Téléphone :<br>  +261 32 67 403 67<br> +261 34 61 810 60</p>
+                <p>Email : <a href="mailto:tsidymiboela0@gmail.com">tsidymiboela0@gmail.com</a></p>
+            </div>
+            <div class="contact-form">
+                <h3>Formulaire de contact rapide</h3>
+                <form id="contactForm" onsubmit="sendEmail(event)">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+        
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required placeholder="Votre email">
+        
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Votre message"></textarea>
+        
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
     </section>
-
 </body>
 </html>

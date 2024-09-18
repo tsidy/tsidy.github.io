@@ -1,0 +1,178 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+/*profile*/
+.profile-photo {
+    border: 5px solid #fff; /* Bord blanc pour faire ressortir la photo */
+    border-radius: 50%;
+    width: 250px; /* Ajustez le diamètre de la photo de profil */
+    height: 250px; /* Ajustez le diamètre de la photo de profil */
+    object-fit: cover; /* Assure que l'image couvre bien le cercle */
+}
+/* Grille de projets avec CSS Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px; /* Espace entre les éléments */
+    padding: 20px;
+}
+
+.project-item {
+    text-align: center;
+    border: 1px solid #ddd; /* Ajoute une bordure pour la visibilité */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+}
+#projets h2 {
+    text-align: center;
+}
+
+.process-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 220px; /* Ajuste la largeur minimale des étapes */
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.process-step h3 {
+    margin-top: 0;
+    text-align: left;
+    color: rgb(24, 23, 23)
+}
+.process-step h4 { 
+    text-align: center;
+}
+
+.process-step p {
+    margin: 0;
+    text-align: left;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact-details, .contact-form {
+    flex: 1;
+    margin: 0 10px;
+}
+
+form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style du message de bienvenue */
+#welcome-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #eef2f7;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-message h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+#welcome-message p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
