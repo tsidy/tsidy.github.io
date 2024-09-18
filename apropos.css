@@ -93,6 +93,9 @@ section p {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+    max-height: 600px; /* Hauteur maximale du conteneur */
+    overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+    padding-right: 10px; /* Ajouter un padding à droite pour éviter que le scroll ne cache le contenu */
 }
 
 .certification-card {
