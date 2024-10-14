@@ -1,0 +1,112 @@
+/* mes_projets.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fond gris clair pour tout le site */
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background: #444;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    margin: 0;
+    text-align: justify;
+}
+/* Grille de projets avec CSS Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colonnes flexibles */
+    gap: 20px; /* Espace entre les éléments */
+    padding: 20px;
+}
+
+.project-item {
+    text-align: center;
+    border: 1px solid #ddd; /* Ajoute une bordure pour la visibilité */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition fluide */
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-item:hover {
+    transform: translateY(-10px); /* Déplacement vers le haut lors du hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre pour l'effet de profondeur */
+}
+
+#projets h2 {
+    text-align: center;
+}
+
+/* Media Queries pour adapter la grille selon la taille de l'écran */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Moins de colonnes sur tablette */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+}
