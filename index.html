@@ -9,7 +9,7 @@
     <!-- Inclure la bibliothèque EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function () {
+        (function() {
             emailjs.init("ZRVaoFrSWcjDvYtpT"); // Remplace par ton User ID
         })();
 
@@ -30,10 +30,10 @@
 
             // Envoyer l'email via EmailJS
             emailjs.send("service_cvvpfp6", "template_xqulzqt", templateParams)
-                .then(function (response) {
+                .then(function(response) {
                     alert("Votre message a été envoyé avec succès !");
                     document.getElementById('contactForm').reset(); // Réinitialiser le formulaire
-                }, function (error) {
+                }, function(error) {
                     console.log('Erreur lors de l\'envoi de l\'email.', error);
                     alert("Une erreur est survenue, veuillez réessayer.");
                 });
@@ -59,19 +59,11 @@
         <img src="images_principales/profil.jpg" alt="Photo de Profil" class="profile-photo">
         <section id="welcome-message">
             <h1>Bienvenue sur mon Portfolio</h1>
-            <p>Bonjour et merci d'avoir pris le temps de visiter mon portfolio ! 🎉<br>
-                Vous êtes sur le point de plonger dans un monde où l'analyse de données rencontre l'innovation, et où
-                chaque projet raconte une histoire unique.
-
-                Explorez mes dernières réalisations, de la gestion de projets percutants à des stratégies de
-                développement durable, avec un engagement constant pour l'excellence. 🌍✨<br>
-
-                Que vous soyez curieux, en quête d'inspiration ou à la recherche d'une collaboration audacieuse, je vous
-                invite à naviguer à travers mon travail et à découvrir ce qui m'anime.
+            <p>Bonjour et merci d'avoir pris le temps de visiter mon portfolio ! 🎉<br> Vous êtes sur le point de plonger dans un monde où l'analyse de données rencontre l'innovation, et où chaque projet raconte une histoire unique. Explorez mes dernières
+                réalisations, de la gestion de projets percutants à des stratégies de développement durable, avec un engagement constant pour l'excellence. 🌍✨<br> Que vous soyez curieux, en quête d'inspiration ou à la recherche d'une collaboration audacieuse,
+                je vous invite à naviguer à travers mon travail et à découvrir ce qui m'anime.
                 <br>
-                <strong>💡 Votre prochain projet pourrait être ici.</strong><br>
-                Contactez-moi pour discuter de nouvelles opportunités ou simplement pour échanger des idées. Bonne
-                visite !
+                <strong>💡 Votre prochain projet pourrait être ici.</strong><br> Contactez-moi pour discuter de nouvelles opportunités ou simplement pour échanger des idées. Bonne visite !
             </p>
         </section>
 
@@ -116,41 +108,29 @@
                 <h3>1. Analyse des besoins</h3>
                 <hr>
                 <h4>Comprendre</h4>
-                <p>Dans un premier temps, j’établis une Business request qui permet une meilleure compréhension des
-                    attentes.
-
-                    Dans une seconde partie, j’analyse les données sur lesquelles je travaille afin de retenir seulement
-                    celles dont j’ai besoin.</p>
+                <p>Dans un premier temps, j’établis une Business request qui permet une meilleure compréhension des attentes. Dans une seconde partie, j’analyse les données sur lesquelles je travaille afin de retenir seulement celles dont j’ai besoin.</p>
             </div>
             <div class="process-step">
                 <h3>2. Requêtes et nettoyage</h3>
                 <hr>
                 <h4>Préparation des données</h4>
-                <p>À partir des données fournies (MySQL/ SQL Server/Excel/CSV/Python/ JSON), je nettoie les données en
-                    amont avant de les préparer.
-
-                    Pour cette étape, je transforme les informations à partir de la base de données, ou sur PowerQuery
-                    (code M), Excel, ou alors sur Python. Pour finir, je les importe sur l’outil BI demandé.</p>
+                <p>À partir des données fournies (MySQL/ SQL Server/Excel/CSV/Python/ JSON), je nettoie les données en amont avant de les préparer. Pour cette étape, je transforme les informations à partir de la base de données, ou sur PowerQuery (code M),
+                    Excel, ou alors sur Python. Pour finir, je les importe sur l’outil BI demandé.</p>
             </div>
             <div class="process-step">
                 <h3>3. Création dashboard</h3>
                 <hr>
                 <h4>Élaboration des visuelles</h4>
-                <p>Après avoir réalisé les relations entre les différentes tables dans le modèle, et avoir créé les
-                    mesures intéressantes, je construis les différents visuels adaptés en fonction des destinataires
-                    (Clients/inter entreprise/ autres services).
-
+                <p>Après avoir réalisé les relations entre les différentes tables dans le modèle, et avoir créé les mesures intéressantes, je construis les différents visuels adaptés en fonction des destinataires (Clients/inter entreprise/ autres services).
                     Création d’interactivité et/ou sous format mobile.</p>
             </div>
             <div class="process-step">
                 <h3>4. Communiquer</h3>
                 <hr>
                 <h4>Transmettre aux métiers</h4>
-                <p>Dans un dernier temps, je transmets mes analyses aux équipes métiers avec la rédaction d’ un rapport
-                    accompagnant mes visuels, ou en réalisant une présentation.
-
-                    Pour finir, je rédige une synthèse sur les attentes et objectifs, ainsi que sur les points clés à
-                    identifier.</p>
+                <p>Dans un dernier temps, je transmets mes analyses aux équipes métiers avec la rédaction d’ un rapport accompagnant mes visuels, ou en réalisant une présentation. Pour finir, je rédige une synthèse sur les attentes et objectifs, ainsi que
+                    sur les points clés à identifier.
+                </p>
             </div>
         </div>
     </section>
