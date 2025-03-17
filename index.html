@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andriniaina RAKOTOZAFY Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio Data Analyst</title>
+    <link rel="stylesheet" href="css/style.css">
     <!-- Inclure la bibliothèque EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -42,100 +42,86 @@
 </head>
 
 <body>
-    <!-- Menu de navigation -->
+    <!-- Barre de Navigation -->
     <nav>
-        <ul>
-
-            <li><a href="services.html">Mes services</a></li>
-            <li><a href="apropos.html">A propos</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="mes_projets.html">Mes projets</a></li>
+        <ul class="navbar">
+            <!-- <li><a href="index.html?">Accueil</a></li> -->
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="mesprojets.html">Mes Projets</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#contact">Me Contacter</a></li>
         </ul>
     </nav>
-
-    <!-- Image de bienvenue -->
+    <!-- Section Accueil -->
     <header>
-        <img src="images_principales/Couverture_Web.png" alt="Bienvenue">
-        <img src="images_principales/profil.jpg" alt="Photo de Profil" class="profile-photo">
-        <section id="welcome-message">
+        <div class="cover-photo">
+            <img src="images/photo_de_profile_couverture/couverture.png" alt="Photo de couverture">
+        </div>
+        <div class="profile-photo">
+            <img src="images/photo_de_profile_couverture/profile.jpg" alt="Photo de profil">
+        </div>
+        <!-- <div class="welcome-text" id="welcome-message">
             <h1>Bienvenue sur mon Portfolio</h1>
-            <p>Bonjour et merci d'avoir pris le temps de visiter mon portfolio ! 🎉<br> Vous êtes sur le point de plonger dans un monde où l'analyse de données rencontre l'innovation, et où chaque projet raconte une histoire unique. Explorez mes dernières
-                réalisations, de la gestion de projets percutants à des stratégies de développement durable, avec un engagement constant pour l'excellence. 🌍✨<br> Que vous soyez curieux, en quête d'inspiration ou à la recherche d'une collaboration audacieuse,
-                je vous invite à naviguer à travers mon travail et à découvrir ce qui m'anime.
-                <br>
-                <strong>💡 Votre prochain projet pourrait être ici.</strong><br> Contactez-moi pour discuter de nouvelles opportunités ou simplement pour échanger des idées. Bonne visite !
-            </p>
-        </section>
+            <p>Analyse de données, segmentation, création d'enquêtes, applications Excel, Power BI, et bien plus.</p>
+        </div> -->
+        <div class="welcome-text" id="welcome-message">
+            <h1>🌟 Bienvenue sur mon Portfolio ! 🌟</h1>
+            <p>🚀 L'univers de l'<strong>analyse de données?</strong> 📊, de la <strong>segmentation pour le marketing?</strong> 🎯, de la création d'<strong>enquêtes?</strong> 📝, des <strong>applications Excel?</strong> 💻, et bien plus encore ! 💡</p>
+            <p>🔍 Explorez mes projets et découvrez comment je peux vous accompagner dans la transformation de vos données en solutions stratégiques. 📈</p>
+            <p>👉 Prêt(e) à collaborer ? Let's connect ! 💬</p>
+        </div>
 
     </header>
 
-    <!-- Aperçu des projets -->
-    <section id="projects">
-        <h2>Mes projets</h2>
-        <div class="project-grid">
-            <div class="project-item">
-                <a href="projet-rfm.html">
-                    <h3>Etude de segmentation clients</h3>
-                </a>
-                <img src="images_principales/resultats_cluster.PNG" alt="Projet 1">
-
-            </div>
-            <div class="project-item">
-                <a href="projet-agricole.html">
-                    <h3>Maquette de projet "Rizipisciculture"</h3>
-                </a>
-                <img src="images_principales/3.PNG" alt="Projet 2">
-
-            </div>
-            <div class="project-item">
-                <h3>Projet de formation de suivi évaluation</h3>
-                <img src="images_principales/4.PNG" alt="Projet 3">
-
-            </div>
-            <div class="project-item">
-                <h3>Projet de formation de suivi évaluation</h3>
-                <img src="images_principales/4.PNG" alt="Projet 3">
-
-            </div>
+    <!-- Section Mes Projets -->
+    <section id="mes-projets">
+        <h2>Mes Projets</h2>
+        <div class="projects-grid">
+            <a href="projet-pages/projet-rfm.html" class="project-card">
+                <img src="images/projets/rfm/resultats_cluster.PNG" alt="Projet 1">
+                <h3>Projet RFM</h3>
+            </a>
+            <a href="projet-pages/projet2.html" class="project-card">
+                <img src="images/projets/agricole/rizipisciculture.jpg" alt="Projet 2">
+                <h3>Projet Agricole</h3>
+            </a>
+            <a href="projet-pages/projet3.html" class="project-card">
+                <img src="images/projets/suivi_evaluation/suivi_eval.png" alt="Projet 3">
+                <h3>Projet Suivi & Évaluation</h3>
+            </a>
+            <a href="projet-pages/projet4.html" class="project-card">
+                <img src="images/projets/autres.png" alt="Projet 4">
+                <h3>Autre Projet</h3>
+            </a>
         </div>
     </section>
 
-    <!-- Mon procédé -->
-    <section id="process">
-        <h2>Mon procédé</h2>
-        <div class="process-container">
-            <div class="process-step">
+    <!-- Section Mon Procédé -->
+    <section id="mon-procede">
+        <h2>Ma Méthodologie</h2>
+        <div class="process-steps">
+            <div class="step">
                 <h3>1. Analyse des besoins</h3>
-                <hr>
-                <h4>Comprendre</h4>
-                <p>Dans un premier temps, j’établis une Business request qui permet une meilleure compréhension des attentes. Dans une seconde partie, j’analyse les données sur lesquelles je travaille afin de retenir seulement celles dont j’ai besoin.</p>
+                <p>Je commence par une évaluation approfondie de vos besoins spécifiques et de vos attentes, afin de définir clairement les objectifs et priorités du projet.</p>
             </div>
-            <div class="process-step">
-                <h3>2. Requêtes et nettoyage</h3>
-                <hr>
-                <h4>Préparation des données</h4>
-                <p>À partir des données fournies (MySQL/ SQL Server/Excel/CSV/Python/ JSON), je nettoie les données en amont avant de les préparer. Pour cette étape, je transforme les informations à partir de la base de données, ou sur PowerQuery (code M),
-                    Excel, ou alors sur Python. Pour finir, je les importe sur l’outil BI demandé.</p>
+            <div class="step">
+                <h3>2. Conception et validation</h3>
+                <p>Je conçois une solution sur mesure en élaborant un cahier des charges détaillé, que je valide avec vous pour m'assurer qu'il répond parfaitement à vos exigences.</p>
             </div>
-            <div class="process-step">
-                <h3>3. Création dashboard</h3>
-                <hr>
-                <h4>Élaboration des visuelles</h4>
-                <p>Après avoir réalisé les relations entre les différentes tables dans le modèle, et avoir créé les mesures intéressantes, je construis les différents visuels adaptés en fonction des destinataires (Clients/inter entreprise/ autres services).
-                    Création d’interactivité et/ou sous format mobile.</p>
+            <div class="step">
+                <h3>3. Mise en œuvre</h3>
+                <p>Je mets en œuvre la solution en suivant un plan précis, tout en garantissant la qualité et la cohérence à chaque étape du processus.</p>
             </div>
-            <div class="process-step">
-                <h3>4. Communiquer</h3>
-                <hr>
-                <h4>Transmettre aux métiers</h4>
-                <p>Dans un dernier temps, je transmets mes analyses aux équipes métiers avec la rédaction d’ un rapport accompagnant mes visuels, ou en réalisant une présentation. Pour finir, je rédige une synthèse sur les attentes et objectifs, ainsi que
-                    sur les points clés à identifier.
-                </p>
+            <div class="step">
+                <h3>4. Livraison et suivi</h3>
+                <p>Je livre une solution clé en main et assure un suivi post-livraison pour garantir son efficacité et sa pérennité à long terme.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+
+
+    <!-- Section Me Contacter -->
     <section id="contact">
         <h2>Me contacter</h2>
         <div class="contact-info">
@@ -147,7 +133,8 @@
                 <p>Email : <a href="mailto:tsidymiboela0@gmail.com">tsidymiboela0@gmail.com</a></p>
             </div>
             <div class="contact-form">
-                <h3>Formulaire de contact rapide</h3>
+                <h3>💡 Votre prochain projet pourrait être ici.<br> Contactez-moi!
+                </h3>
                 <form id="contactForm" onsubmit="sendEmail(event)">
                     <label for="name">Nom :</label>
                     <input type="text" id="name" name="name" required placeholder="Votre nom">
@@ -163,6 +150,10 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; Andriniaina RAKOTOZAFY. Tous droits réservés.</p>
+    </footer>
 </body>
 
 </html>

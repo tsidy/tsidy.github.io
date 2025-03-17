@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALYSE ET SEGMENTATION</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Lien vers le fichier CSS commun -->
+    <link rel="stylesheet" href="../css/call.css">
+    <!-- Lien vers le fichier CSS spécifique au projet RFM -->
+</head>
+
+<body>
+
+    <!-- Barre de Navigation -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="../index.html?">Accueil</a></li>
+            <li><a href="../apropos.html">À propos</a></li>
+            <li><a href="../mesprojets.html">Mes Projets</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a href="../index.html/#contact">Me Contacter</a></li>
+        </ul>
+    </nav>
+
+    <section id="introd">
+        <h1>Contexte</h1>
+        <p>
+            Dans un monde où la satisfaction client est devenue un impératif stratégique, l’efficacité des centres d’appels joue un rôle crucial dans la perception que les clients ont des entreprises. Les centres d'appels sont souvent la première ligne de contact
+            entre une entreprise et ses clients, et la manière dont les agents gèrent ces interactions peut influencer considérablement la fidélité et la satisfaction des clients. Cette étude vise à analyser la performance d'un centre d'appels à travers
+            l'évaluation de plusieurs indicateurs clés de performance (KPI) tels que le temps d'attente, la durée des appels et la satisfaction client. Nous nous concentrerons sur un ensemble de données collectées au sein du centre d'appels, comprenant
+            des informations sur les appels, les agents, les sujets abordés, ainsi que les résultats des interactions avec les clients.
+        </p>
+
+    </section>
+    <section id="road">
+        <h1>Roadmap Condensée pour l'Étude d'Analyse des Données du Call Center</h1>
+
+        <h2>1. Définition du Projet</h2>
+        <ul>
+            <li>Identifier rapidement les objectifs de l'étude et les questions de recherche clés.</li>
+            <li>Établir un plan de travail rapide.</li>
+        </ul><br>
+
+        <h2>2. Préparation des Données</h2>
+        <ul>
+            <li>Charger le dataset dans Jupyter Notebook.
+            </li>
+            <li>Vérifier et nettoyer les données (identification des valeurs manquantes et incohérences).
+            </li>
+        </ul><br>
+
+        <h2>3. Exploration des Données</h2>
+        <ul>
+            <li>Analyser les statistiques descriptives des principales variables.
+            </li>
+            <li>Visualiser les distributions des variables clés à l'aide de graphiques (histogrammes, box plots).
+            </li>
+        </ul><br>
+
+        <h2>4. Analyse des Performances</h2>
+        <ul>
+            <li>Analyser les performances des agents sur les KPI clés (temps d'attente, durée des appels, satisfaction client).
+            </li>
+            <li>Évaluer le taux de résolution des problèmes et le taux d'appels abandonnés.
+            </li>
+        </ul><br>
+
+        <h2>5. Identification des Opportunités d'Amélioration</h2>
+        <ul>
+            <li>Identifier les domaines d'amélioration basés sur l'analyse.
+            </li>
+            <li>Proposer des recommandations concrètes.
+            </li>
+        </ul><br>
+
+        <h2>6. Création de Visualisations et Rapports</h2>
+        <ul>
+            <li>Créer des visualisations claires pour illustrer vos résultats.
+            </li>
+            <li>Rédiger un rapport succinct et préparer une présentation des résultats.
+            </li>
+        </ul><br>
+
+        <h2>7. Feedback et Ajustements</h2>
+        <ul>
+            <li>Présenter les résultats à vos collègues ou parties prenantes pour obtenir des commentaires.
+            </li>
+            <li>Ajuster vos recommandations en fonction du feedback.
+            </li>
+        </ul>
+    </section>
+
+    <section id="road1">
+        <h1>1. Définition du Projet</h1><br>
+        <h2>Objectifs de l'étude :</h2>
+        <p>Évaluer la performance des agents du call center. Identifier les problèmes récurrents liés aux appels et leur impact sur la satisfaction client. Proposer des améliorations pour optimiser le service client.</p><br>
+
+        <h2>Questions de recherche clés :</h2>
+        <p>
+            <ul>
+                <li>Quel est le temps d'attente moyen et la durée des appels ?
+                </li>
+                <li>Quel est le taux de résolution des problèmes par les agents ?
+                </li>
+                <li>Comment la satisfaction des clients varie-t-elle selon les différents sujets d'appels ?
+                </li>
+            </ul>
+        </p>
+    </section>
+    <section id="road2">
+        <h1>2. Préparation des Données</h1><br>
+        <img src="../images/projets/call/r2.png" alt="df.info()"><br>
+
+        <h2>Description des Variables</h2>
+
+        <div id="descri">
+            <h3>Call_Id :</h3>
+            <ul>
+                <li>Type : Identifiant (ID)</li>
+                <li>Description : Un identifiant unique attribué à chaque appel, utilisé pour référencer spécifiquement chaque interaction dans le dataset.</li>
+            </ul><br>
+
+            <h3>Agent :</h3>
+            <ul>
+                <li>Type : Catégorique (Nom)</li>
+                <li>Description : Le nom de l'agent du centre d'appels qui a pris en charge l'appel. Cette variable permet d'analyser les performances par agent.</li>
+            </ul><br>
+
+            <h3>Date :</h3>
+            <ul>
+                <li>Type : Date</li>
+                <li>Description : La date à laquelle l'appel a eu lieu. Cela peut être utilisé pour analyser les tendances au fil du temps.</li>
+            </ul><br>
+
+            <h3>Time :</h3>
+            <ul>
+                <li>Type : Heure</li>
+                <li>Description : L'heure à laquelle l'appel a été reçu. Elle peut être utilisée pour identifier les périodes de pointe en termes d'appels.</li>
+            </ul><br>
+
+            <h3>Topic :</h3>
+            <ul>
+                <li>Type : Catégorique</li>
+                <li>Description : Le sujet de l'appel, qui peut être l'un des suivants :
+                    <ul>
+                        <li>Contract related : Questions liées aux contrats.</li>
+                        <li>Technical Support : Assistance technique.</li>
+                        <li>Payment related : Questions concernant les paiements.</li>
+                        <li>Admin Support : Assistance administrative.</li>
+                        <li>Streaming : Questions concernant le streaming.</li>
+                    </ul>
+                </li>
+            </ul><br>
+
+            <h3>Answered :</h3>
+            <ul>
+                <li>Type : Catégorique (binaire)</li>
+                <li>Description : Indique si l'appel a été répondu ou non. Possède deux valeurs possibles :
+                    <ul>
+                        <li>Y : L'appel a été répondu.</li>
+                        <li>N : L'appel n'a pas été répondu.</li>
+                    </ul>
+                </li>
+            </ul><br>
+
+            <h3>Resolved :</h3>
+            <ul>
+                <li>Type : Catégorique (binaire)</li>
+                <li>Description : Indique si le problème du client a été résolu durant l'appel. Possède également deux valeurs possibles :
+                    <ul>
+                        <li>Y : Le problème a été résolu.</li>
+                        <li>N : Le problème n'a pas été résolu.</li>
+                    </ul>
+                </li>
+            </ul><br>
+
+            <h3>SaS (Speed of Answer) :</h3>
+            <ul>
+                <li>Type : Numérique (secondes)</li>
+                <li>Description : Le temps d'attente avant que l'appel soit répondu, mesuré en secondes. Cette variable est essentielle pour évaluer l'efficacité du service client.
+                </li>
+            </ul><br>
+
+            <h3>AvgTalkDuration :</h3>
+            <ul>
+                <li>Type : Durée (format hh:mm:ss)</li>
+                <li>Description : La durée moyenne de l'appel, mesurée au format heures : minutes : secondes. Cette variable aide à comprendre le temps consacré par les agents pour traiter les appels.
+                </li>
+            </ul><br>
+
+            <h3>Satisfaction_rating :</h3>
+            <ul>
+                <li>Type : Numérique</li>
+                <li>Description : Une note de satisfaction donnée par le client après l'appel, souvent sur une échelle (par exemple, de 1 à 5). Cette variable est cruciale pour mesurer la satisfaction des clients vis-à-vis du service reçu.
+                </li>
+            </ul><br>
+        </div>
+
+        <div id="identification">
+            <h2>Identification des valeurs manquantes et les incohérences :</h2>
+            <img src="../images/projets/call/ident_var.png" alt="df.isnull().sum()"><br>
+            <p>
+                <strong>Résumé des Valeurs Manquantes :</strong><br>
+                <ul>
+                    <li>SaS (Speed of Answer) : 946 valeurs manquantes</li>
+                    <li>AvgTalkDuration : 946 valeurs manquantes</li>
+                    <li>Satisfaction_rating : 946 valeurs manquantes</li>
+                </ul>
+            </p>
+            <p>
+                <strong>Actions à Envisager :</strong><br>
+                <ol>
+                    <li>Analyse de l'Impact des Valeurs Manquantes : <br> Comprendre l'impact potentiel des valeurs manquantes sur notre analyse. Par exemple, si ces colonnes sont essentielles pour évaluer la performance des agents ou la satisfaction des
+                        clients, nous devrons y prêter une attention particulière.
+                    </li><br>
+                    <li>Options de Traitement des Valeurs Manquantes : <br>
+                        <ul>
+                            <li>Suppression : Si les valeurs manquantes représentent un faible pourcentage de l'ensemble des données et n'affectent pas l'analyse, nous pouvons envisager de supprimer ces lignes.</li>
+                            <li>Mise à coté ou dans une autre variables : On les rassembles dans une ou plusieurs variables</li>
+                        </ul>
+
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                <strong>Plan d'Action pour le Traitement des Valeurs Manquantes :</strong><br>
+                <strong>Analyse Préliminaire des Valeurs Manquantes</strong><br> Pourcentage des Valeurs Manquantes : Calcule du pourcentage de valeurs manquantes pour chaque variable afin de comprendre l'ampleur du problème. <br>
+
+                <img src="../images/projets/call/pourcent_null.png" alt="df.isnull().mean() * 100"><br> Étant donné que ces trois variables sont essentielles pour notre analyse, 18,92 % de données manquantes est une proportion significative. La suppression
+                de ces lignes pourrait entraîner la perte d'une quantité considérable d'informations.
+            </p>
+            <p>
+                <strong>Résolution :</strong><br>
+                <ol>
+                    <li>Normalisation de variable : <br> Commençons par la variable "AvgTalkDuration" on va créer une variable "AvgTalkDuration_Second" pour mieux gerer <br>
+                        <img src="../images/projets/call/avtalk.png" alt="">
+
+                    </li>
+                    <li>Lecture approfondie du jeu de données : <br> Lecture du jeu de données pour comprendre la répartition des valeurs manquantes, sur SaS, AvgTalkDuration, Satisfaction_rating, AvgTalkDuration_seconds. Il se peut que ces variables ont
+                        les même lignes vides <br>
+                        <img src="../images/projets/call/null.png" alt="Tableau de variables null"><br>
+                        <strong> Observation: </strong> Comme on l'avait pensé, ces trois variables ont les même lignes vides. et on voit que Answered et Resolved aussi son en N. Ces données sont donc mal traité.
+
+                    </li>
+
+                    <li>Solution : <br> Il existe de nombreuses solutions pour ce cas. Toutefois, afin d'exploiter pleinement notre jeu de données, il serait judicieux de créer un colonne <strong>Abandoned_Call</strong> avec valeurs: Y/N. Inutile de le mettre
+                        en 0/1
+
+                        <img src="../images/projets/call/abandoned_call.png" alt="">
+
+                    </li>
+                </ol>
+            </p>
+        </div>
+    </section>
+    <section id="road3">
+        <h1>3. Exploration des Données</h1><br>
+        <ul>
+            <li>Analyser les statistiques descriptives des principales variables.</li>
+            <li>Visualiser les distributions des variables clés à l'aide de graphiques (histogrammes, box plots).</li>
+        </ul>
+
+        <p>Pour mieux analyser, on utilisera seulement les <strong>Abandoned_Call = "Y"</strong> </p>
+
+        <img src="../images/projets/call/util_stat.png" alt="">
+
+        <p>Vérification</p>
+        <img src="../images/projets/call/verif.png" alt="">
+
+        <ol>
+            <li>
+                <h3>SaS (Speed of Answer)</h3>
+                <ul>
+                    <li>Nombre d'échantillons (count) : 4054</li>
+                    <li>Moyenne (mean) : 67.52 secondes</li>
+                    <li>Écart-type (std) : 33.59 secondes, ce qui montre une certaine dispersion dans le temps de réponse des appels.</li>
+                    <li>Valeur minimale (min) : 10 secondes</li>
+                    <li>25e percentile (25%) : 39 secondes, ce qui signifie que 25 % des appels ont été répondus en 39 secondes ou moins.</li>
+                    <li>Médiane (50%) : 68 secondes, ce qui signifie que 50 % des appels ont été répondus en 68 secondes ou moins.</li>
+                    <li>75e percentile (75%) : 97 secondes, donc 25 % des appels ont été répondus en plus de 97 secondes.</li>
+                    <li>Valeur maximale (max) : 125 secondes.</li><br>
+                    <strong>Conclusion : La durée médiane de réponse est de 68 secondes, mais il y a une dispersion notable, avec certains appels répondus en 125 secondes.</strong>
+                </ul>
+            </li>
+            <li>
+                <h3>Satisfaction_rating</h3>
+                <ul>
+                    <li>Nombre d'échantillons (count) : 4054</li>
+                    <li>Moyenne (mean) : 3.40 sur 5, ce qui montre une tendance générale positive dans les évaluations de satisfaction.</li>
+                    <li>Écart-type (std) : 1.21, montrant une certaine variabilité dans les notes de satisfaction.</li>
+                    <li>Valeur minimale (min) : 1</li>
+                    <li>25e percentile (25%) : 3, ce qui signifie que 25 % des appels ont une note de satisfaction inférieure ou égale à 3.</li>
+                    <li>Médiane (50%) : 3, donc 50 % des appels ont une note de satisfaction de 3 ou moins.</li>
+                    <li>75e percentile (75%) : 4, ce qui signifie que 25 % des appels ont reçu une note de satisfaction supérieure à 4.</li>
+                    <li>Valeur maximale (max) : 5.</li><br>
+                    <strong>Conclusion : La plupart des clients donnent une note de 3 ou 4, avec une moyenne générale de 3.4, mais il y a une certaine variation avec quelques notes basses et des scores maximaux de 5.</strong>
+                </ul>
+            </li>
+            <li>
+                <h3>AvgTalkDuration_seconds (Durée moyenne des appels en secondes)</h3>
+                <ul>
+                    <li>Nombre d'échantillons (count) : 4054</li>
+                    <li>Moyenne (mean) : 224.92 secondes (environ 3 minutes 45 secondes).</li>
+                    <li>Écart-type (std) : 111.38 secondes, ce qui montre une grande variation dans la durée des appels.</li>
+                    <li>Valeur minimale (min) : 30 secondes.</li>
+                    <li>25e percentile (25%) : 130 secondes, donc 25 % des appels durent 2 minutes 10 secondes ou moins.</li>
+                    <li>Médiane (50%) : 226 secondes, ce qui signifie que 50 % des appels durent environ 3 minutes 46 secondes ou moins.</li>
+                    <li>75e percentile (75%) : 319 secondes, donc 25 % des appels durent plus de 5 minutes 19 secondes.</li>
+                    <li>Valeur maximale (max) : 420 secondes (7 minutes).</li>
+                    <strong>Conclusion : La durée médiane des appels est de 226 secondes (environ 3 minutes 46 secondes), mais il existe des appels significativement plus longs et plus courts, avec des appels allant de 30 secondes à 7 minutes.</strong>
+                </ul>
+            </li>
+        </ol>
+        <p>
+            <h2>Synthèse</h2>
+            <ul>
+                <li>Le temps de réponse (SaS) varie de 10 à 125 secondes, avec une médiane de 68 secondes.</li>
+                <li>Le niveau de satisfaction a une moyenne de 3.4 sur 5, avec une certaine variabilité.</li>
+                <li>La durée des appels est très variable, avec une médiane d'environ 3 minutes 46 secondes et des appels allant de 30 secondes à 7 minutes.</li><br> Ces statistiques suggèrent des points potentiels à améliorer dans le service client, notamment
+                la réduction du temps de réponse et l'optimisation des interactions pour raccourcir les durées d'appel les plus longues.
+            </ul>
+        </p>
+
+        <p>
+            <h2>Distribution des variables</h2>
+            Dans toute étude de données, l'exploration et l'analyse des distributions des variables constituent une étape essentielle. Cette analyse permet de mieux comprendre la structure et les caractéristiques sous-jacentes des données, ainsi que de poser les
+            bases pour des analyses plus avancées. Les variables peuvent être de différents types — numériques, catégoriques, ou temporelles — chacune apportant des informations précieuses sur les phénomènes étudiés.
+        </p>
+
+        <p>
+            <h3>Distribution des variables numériques</h3>
+            Les variables quantitatives, comme la durée d'un appel ou une note de satisfaction, nécessitent une analyse approfondie de leur distribution pour révéler des tendances centrales (comme la moyenne ou la médiane), la variabilité, et la présence d'anomalies
+            (comme des valeurs aberrantes). Comprendre la distribution de ces variables aide à identifier les comportements types des clients ou la performance moyenne des agents.
+        </p>
+        <div id="distribution">
+            <label for="sas">Histogramme pour Speed of Answer (SaS)</label>
+            <img src="../images/projets/call/distrib_SaS.png" alt=""><br>
+
+            <label for="sati">Histogramme pour Satisfaction_rating</label>
+            <img src="../images/projets/call/satisfaction_rating.png" alt=""><br>
+
+            <label for="avtalk">Histogramme pour AvgTalkDuration_seconds</label>
+            <img src="../images/projets/call/avtalk2.png" alt=""><br>
+
+            <label for="freq">la fréquence des niveaux de satisfaction</label>
+            <img src="../images/projets/call/freq1.png" alt=""><br>
+            <img src="../images/projets/call/freq2.png" alt="">
+
+            <label for="">Durée d'Appel Moyenne par Niveau de Satisfaction</label>
+            <img src="../images/projets/call/appe_sati.png" alt=""><br><br>
+
+            <strong>Distribution des variables catégoriques : </strong><br> Pour les variables qualitatives telles que le nom de l'agent, le sujet de l'appel ou la résolution des problèmes, il est crucial de visualiser la répartition des catégories. Cela
+            permet de savoir quelle catégorie prédomine, s'il existe des déséquilibres ou des tendances qui méritent une attention particulière, comme un agent traitant un volume disproportionné d'appels ou un sujet générant de nombreuses interactions.
+
+            <label for="nb appels par agent">Nombre d'appels par agent</label>
+            <img src="../images/projets/call/appel_agent.png" alt=""><br>
+
+            <label for="sujets">Répartition des sujets d'appel</label>
+            <img src="../images/projets/call/sujest_appels.png" alt=""><br>
+
+            <label for="resolved">Répartition des appels résolus</label>
+            <img src="../images/projets/call/resolved.png" alt=""><br>
+
+            <label for="tendance">Tendances des appels par date</label>
+            <img src="../images/projets/call/tendance.png" alt=""><br>
+
+            <label for="heure">Distribution des appels par heure</label>
+            <img src="../images/projets/call/heure.png" alt=""><br>
+        </div>
+    </section>
+
+    <section id="road4">
+        <h1>4. Analyse des performances</h1>
+        <ul>
+            <li>Analyser les performances des agents sur les KPI clés (temps d'attente, durée des appels, satisfaction client).</li>
+            <li>Évaluer le taux de résolution des problèmes et le taux d'appels abandonnés.</li>
+        </ul><br>
+        <img src="../images/projets/call/kpi.png" alt="kpi"><br>
+
+        <strong>Observation : </strong><br>
+        <ul>
+            <li>SaS : Joe semble avoir le temps de réponse le plus long (70.99 secondes), tandis que Becky a le plus court (65.33 secondes). Cela pourrait indiquer que Joe a besoin de plus de formation ou d'assistance.</li>
+            <li>AvgTalkDuration : Dan a la durée d'appel la plus élevée (231.19 secondes), ce qui pourrait signifier que les clients ont besoin de plus d'assistance. Cela pourrait être positif ou négatif, selon le contexte.</li>
+            <li>Satisfaction Rating : Les notes de satisfaction sont relativement proches, avec Martha ayant la note la plus élevée (3.47), tandis que Joe a la plus basse (3.33). Cela pourrait suggérer que le temps de réponse et la durée des appels affectent
+                la satisfaction des clients.</li>
+        </ul>
+        <p>
+            <strong>taux de résolution</strong><br>
+            <img src="../images/projets/call/taux_resolved.png" alt="">
+        </p>
+        <p>
+            <strong>Comparaison de temps de réponses (SaS), Temps de discussion par agent</strong><br>
+            <img src="../images/projets/call/3var_kpi.png" alt=""><br>
+            <img src="../images/projets/call/3var_kpi2.png" alt="">
+        </p>
+
+    </section>
+
+    <footer>
+        <p>&copy; Andriniaina RAKOTOZAFY. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>

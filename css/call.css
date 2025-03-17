@@ -1,0 +1,15 @@
+body {
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 1%;
+}
+
+section,
+h1,
+h2,
+h3 {
+    text-align: left;
+}

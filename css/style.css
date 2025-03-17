@@ -1,0 +1,292 @@
+/* Style global */
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff;
+    /* Texte en blanc pour contraster avec le fond noir */
+    background-color: #615f5f;
+    /* Fond noir */
+}
+
+h1,
+h2,
+h3 {
+    color: #fff;
+    /* Titres en blanc */
+    text-align: center;
+}
+
+
+/* ---- Nav Bar ---- */
+
+nav {
+    background: #333;
+    /* Gris sidéral pour la barre de navigation */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #92bdeb;
+    text-decoration: underline;
+}
+
+
+/* ---- Header ---- */
+
+header {
+    text-align: center;
+    background-color: #8ea4bb;
+    /* Bleu pour la section header */
+    color: white;
+    padding: 1.5rem 0;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: -75px auto 10px;
+    display: block;
+    border: 5px solid #fff;
+    /* Bordure blanche autour de l'image de profil */
+    box-shadow: 0 2px 10px rgba(168, 168, 168, 0.1);
+}
+
+.welcome-text {
+    margin: 20px 0;
+}
+
+#welcome-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    /* Fond gris pour le message d'accueil */
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-message h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    /* Titre en blanc */
+    margin-bottom: 1rem;
+}
+
+#welcome-message p {
+    font-size: 1.2rem;
+    color: #bbb;
+    /* Texte légèrement grisé pour plus de contraste */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* ---- Sections ---- */
+
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    background: #a09e9e;
+    /* Fond gris sidéral pour les sections */
+    color: #fff;
+    /* Texte en blanc */
+    border-radius: 8px;
+    max-width: 1200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ---- Projects Grid ---- */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    text-decoration: none;
+    color: #fff;
+    /* Texte des cartes de projet en blanc */
+    background: #444;
+    /* Fond plus clair que le fond de la page */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    text-align: center;
+    background-color: #90969c;
+    color: white;
+}
+
+
+/* ---- Process Steps ---- */
+
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.step {
+    flex: 1 1 calc(25% - 1rem);
+    background: #444;
+    /* Fond légèrement plus clair que les sections */
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    /* Titres des étapes en bleu */
+}
+
+
+/* ---- Forms ---- */
+
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #444;
+    /* Fond des formulaires */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #333;
+    /* Fond gris pour les champs de formulaire */
+    color: #fff;
+    /* Texte en blanc */
+}
+
+button {
+    background-color: #e3e8ec;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8798ac;
+}
+
+
+/* ---- Contact ---- */
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact-details,
+.contact-form {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.contact-details a {
+    color: #fff;
+}
+
+form input[type="submit"] {
+    background-color: #8e9092;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #8e8f91;
+}
+
+
+/* ---- Footer ---- */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    /* Fond de pied de page gris sidéral */
+    color: white;
+    margin-top: 2rem;
+}
+
+
+/* ---- Responsive Design ---- */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        flex-direction: column;
+    }
+}
