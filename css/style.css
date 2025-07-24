@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
     color: #fff;
     /* Texte en blanc pour contraster avec le fond noir */
-    background-color: #615f5f;
+    background-color: #101e2a;
     /* Fond noir */
 }
 
@@ -23,9 +23,9 @@ h3 {
 /* ---- Nav Bar ---- */
 
 nav {
-    background: #333;
+    background: #101e2a;
     /* Gris sidéral pour la barre de navigation */
-    color: #fff;
+    color: #c4c5eb;
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -90,7 +90,7 @@ header {
 #welcome-message {
     text-align: center;
     padding: 2rem;
-    background-color: #333;
+    background-color: #101e2a;
     /* Fond gris pour le message d'accueil */
     margin-bottom: 2rem;
     border-radius: 10px;
@@ -119,7 +119,7 @@ header {
 section {
     padding: 2rem;
     margin: 2rem auto;
-    background: #a09e9e;
+    background: #8ea4bb;
     /* Fond gris sidéral pour les sections */
     color: #fff;
     /* Texte en blanc */
@@ -141,7 +141,7 @@ section {
     text-decoration: none;
     color: #fff;
     /* Texte des cartes de projet en blanc */
-    background: #444;
+    background: #101e2a;
     /* Fond plus clair que le fond de la page */
     border-radius: 8px;
     overflow: hidden;
@@ -197,7 +197,7 @@ form {
     display: grid;
     gap: 1rem;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 1 auto;
     background: #444;
     /* Fond des formulaires */
     padding: 1.5rem;
@@ -206,14 +206,21 @@ form {
 }
 
 input,
-textarea,
+textarea{
+    padding: 0.75rem;
+    max-width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #101e2a;
+}
 button {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-    background: #333;
+    background: #101e2a;
     /* Fond gris pour les champs de formulaire */
     color: #fff;
     /* Texte en blanc */
@@ -243,7 +250,8 @@ button:hover {
 .contact-details,
 .contact-form {
     flex: 1;
-    margin: 0 10px;
+    margin: 5px 10px;
+    padding: auto;
 }
 
 .contact-details a {

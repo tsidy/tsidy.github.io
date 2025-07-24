@@ -6,7 +6,7 @@
 }
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f8fafa;
+  background-color: #101e2a;
   color: #1e2a38;
   line-height: 1.6;
   padding-bottom: 40px;
@@ -39,7 +39,7 @@ body {
 .page-header {
   text-align: center;
   padding: 3rem 1rem;
-  background-color: #eaf4f4;
+  background-color: #8ea4bb;
 }
 .page-header h1 {
   font-size: 2.5rem;
