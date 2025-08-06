@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logiciel de gestion de paiement clients</title>
+    <link rel="stylesheet" href="../css/gest.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -17,19 +18,124 @@
             <li><a href="../index.html/#contact">Me Contacter</a></li>
         </ul>
     </nav>
-    <h1>Logiciel de gestion de paiement clients</h1>
-    <p>Ce logiciel permet de gérer les paiements des clients, y compris la création, la modification et la suppression des paiements.</p>
+    
+  <header>
+    <h1>📘 Document Technique – Application de Gestion des Clients</h1>
+    <img src="../images/projets/devapp/gestionclient/face.PNG" alt="">
+  </header>
 
-    <h2>Fonctionnalités</h2>
-    <ul>
-        <li>Ajouter un nouveau paiement client</li>
-        <li>Modifier un paiement existant</li>
-        <li>Supprimer un paiement</li>
-        <li>Afficher l'historique des paiements</li>
-    </ul>
+  <main>
+    <section>
+      <h2>📌 Objectif</h2>
+      <ul>
+        <li>Gestion d'une base de clients</li>
+        <li>Enregistrement de paiements</li>
+        <li>Exportation des données en Excel et PDF</li>
+        <li>Génération de factures client en PDF</li>
+      </ul>
+    </section>
 
-    <h2>Instructions d'utilisation</h2>
-    <p>Pour commencer, veuillez vous connecter avec vos identifiants. Ensuite, vous pourrez accéder aux différentes fonctionnalités du logiciel.</p>
+    <section>
+      <h2>🧱 Technologies utilisées</h2>
+      <p><strong>Python</strong> (Tkinter, SQLite, pandas, re, datetime)</p>
+      <p><strong>Librairies tierces :</strong></p>
+      <ul>
+        <li><code>fpdf</code> : génération PDF</li>
+        <li><code>pandas</code> : export Excel</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🖥️ Fonctionnalités principales</h2>
+
+      <h3>1. Ajout de clients</h3>
+      <ul>
+        <li>Accès via le bouton <strong>+ Ajouter Client</strong></li>
+        <li>Champs obligatoires : Nom, Email, Téléphone (032xxxxxxxx), Montant dû</li>
+        <li>Contrôle de validité avant enregistrement</li>
+      </ul>
+
+      <h3>2. Ajout de paiements</h3>
+      <ul>
+        <li>Double-clic sur un client → ouverture d’une fenêtre de paiement</li>
+        <li>Champs : Montant, Mode de paiement (Espèces, Chèque, Carte), Banque (si Chèque/Carte)</li>
+        <li>Le paiement est automatiquement lié au client sélectionné</li>
+      </ul>
+
+      <h3>3. Affichage des clients</h3>
+      <p>Les clients sont affichés dans un tableau avec :</p>
+      <ul>
+        <li>ID, Nom, Email, Téléphone</li>
+        <li>Montant dû, Montant payé, Reste à payer, Statut de paiement</li>
+      </ul>
+      <p>Codes couleur :</p>
+      <ul>
+        <li class="green">Vert : Paiement complété</li>
+        <li class="orange">Orange : Paiement partiel</li>
+        <li class="red">Rouge : Aucun paiement reçu</li>
+      </ul>
+
+      <h3>4. Export Excel</h3>
+      <p>Génère un fichier .xlsx avec les colonnes :</p>
+      <ul>
+        <li>Nom, Email, Téléphone</li>
+        <li>Montant dû, Payé, Reste</li>
+      </ul>
+
+      <h3>5. Export PDF – Liste clients</h3>
+      <p>Génère un PDF listant tous les clients avec leurs informations principales.</p>
+
+      <h3>6. Génération de facture PDF individuelle</h3>
+      <p>Sélectionner un client, puis cliquer sur <strong>Générer Facture PDF</strong> :</p>
+      <ul>
+        <li>Détails client, Montant dû, payé, reste</li>
+        <li>Liste des paiements (date, montant, mode, banque)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🗃️ Base de données SQLite</h2>
+
+      <h3>Table <code>clients</code></h3>
+      <table>
+        <tr><th>Colonne</th><th>Type</th><th>Description</th></tr>
+        <tr><td>id</td><td>INTEGER</td><td>ID auto-incrémenté</td></tr>
+        <tr><td>nom</td><td>TEXT</td><td>Nom du client</td></tr>
+        <tr><td>email</td><td>TEXT</td><td>Adresse email</td></tr>
+        <tr><td>telephone</td><td>TEXT</td><td>Téléphone (format MG)</td></tr>
+        <tr><td>montant_du</td><td>REAL</td><td>Montant à payer</td></tr>
+        <tr><td>date_ajout</td><td>TEXT</td><td>Date d'ajout du client</td></tr>
+      </table>
+
+      <h3>Table <code>paiements</code></h3>
+      <table>
+        <tr><th>Colonne</th><th>Type</th><th>Description</th></tr>
+        <tr><td>id</td><td>INTEGER</td><td>ID auto-incrémenté</td></tr>
+        <tr><td>client_id</td><td>INTEGER</td><td>Référence vers clients.id</td></tr>
+        <tr><td>date_paiement</td><td>TEXT</td><td>Date du paiement</td></tr>
+        <tr><td>montant</td><td>REAL</td><td>Montant payé</td></tr>
+        <tr><td>mode_paiement</td><td>TEXT</td><td>Espèces, Chèque, ou Carte</td></tr>
+        <tr><td>banque</td><td>TEXT</td><td>Banque utilisée (si applicable)</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>💡 Conseils d'utilisation</h2>
+      <ul>
+        <li>Sauvegardez régulièrement la base <code>clients.db</code></li>
+        <li>Exportez les données en Excel ou PDF pour archivage</li>
+        <li>Utilisez des noms explicites pour les factures générées</li>
+      </ul>
+    </section>
+    <section>
+        <h2>Quelques images</h2>
+        <div class="image-gallery">
+            <img src="../images/projets/devapp/gestionclient/f1.PNG" alt="Ajout de client">
+            <img src="../images/projets/devapp/gestionclient/f2.PNG" alt="Ajout de paiement">
+            <img src="../images/projets/devapp/gestionclient/f3.PNG" alt="Export Excel">
+            <img src="../images/projets/devapp/gestionclient/f4.PNG" alt="Génération de facture PDF">
+    </section>
+  </main>
 
     <footer>
         <p>&copy; 2025 Logiciel de gestion de paiement clients. Tous droits réservés. Andriniaina RAKOTOZAFY</p>

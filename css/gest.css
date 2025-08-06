@@ -1,0 +1,180 @@
+/* Structure de base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #007acc;
+  padding: 0.5rem 0;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  background-color: #e8f4fc;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  color: #007acc;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #007acc;
+  margin-top: 2rem;
+}
+
+h3 {
+  color: #444;
+  margin-top: 1.5rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #007acc;
+  color: white;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+}
+
+.orange {
+  color: orange;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #007acc;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* 📸 Galerie d’images responsive */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  table {
+    border: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  th {
+    background-color: transparent;
+    color: #007acc;
+  }
+
+  td::before {
+    font-weight: bold;
+    color: #555;
+  }
+}
